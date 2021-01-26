@@ -1,0 +1,18 @@
+<div class="card my-5">
+  <div  class="card-body">
+    <table class="table table-bordered table-striped text-center">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Task</th>
+        <th scope="col">Delete ?</th>
+      </tr>
+      <tbody>
+      <tr  *ngFor="let todos of todos">
+        <td>{{ todos.id }}</td>
+        <td>{{ todos.name }}</td>
+        <td (click)="deleteTask(todos.id)" class="btn btn-danger">Delete</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
